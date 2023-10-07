@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Conference & Seminar Management",
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80",
+      "price": "$2500 - $5000",
+      "shortDescription": "Expert planning and execution of conferences and seminars.",
+      "description": "Our seasoned event management team specializes in meticulously planning and flawlessly executing conferences and seminars. We handle everything from venue selection and logistics to attendee registration and audio-visual setup. With our expertise, your event will leave a lasting impression and deliver a seamless experience for all participants."
+    },
+    {
+      "id": 2,
+      "name": "Trade Show & Expo Coordination",
+      "image": "https://images.unsplash.com/photo-1508997449629-303059a039c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "price": "$3500 - $6000",
+      "shortDescription": "Comprehensive management of trade shows and expos.",
+      "description": "Elevate your brand's presence at trade shows and expos with our comprehensive management services. From booth design and setup to marketing and lead generation, we ensure that your brand stands out in the industry. Our team will handle every detail, allowing you to focus on connecting with potential clients and partners."
+    },
+    {
+      "id": 3,
+      "name": "Team Building Workshops",
+      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "price": "$1500 - $3000",
+      "shortDescription": "Engaging team building workshops that foster collaboration.",
+      "description": "Boost morale and strengthen team bonds with our engaging team building workshops. Our experienced facilitators design customized activities that promote collaboration, problem-solving, and communication. Whether you're looking to enhance teamwork within your organization or reward your employees, our workshops create memorable experiences."
+    },
+    {
+      "id": 4,
+      "name": "Product Launch Services",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "price": "$3000 - $7000",
+      "shortDescription": "Strategic planning and execution for successful product launches.",
+      "description": "Launching a new product is a critical moment for your business, and our expert team ensures its success. We offer strategic planning, creative marketing campaigns, and flawless execution for product launches. From event design to media coverage, we make sure your product gets the attention it deserves."
+    },
+    {
+      "id": 5,
+      "name": "Corporate Meeting Planning",
+      "image": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "price": "$2000 - $4000",
+      "shortDescription": "Efficiently organized corporate meetings tailored to your business objectives.",
+      "description": "Our corporate meeting planning services ensure that your business objectives are met efficiently. We handle venue selection, agenda planning, technology setup, and logistics, allowing you to focus on the content of your meeting. Whether it's a board meeting, training session, or strategy session, we make it seamless and productive."
+    },
+    {
+      "id": 6,
+      "name": "Award Ceremony Coordination",
+      "image": "https://images.unsplash.com/photo-1594122230689-45899d9e6f69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "price": "$2800 - $5500",
+      "shortDescription": "Elegant award ceremonies to honor achievements.",
+      "description": "Celebrate excellence within your organization with our elegant award ceremony coordination. We take care of every detail, from venue decoration and award design to guest invitations and program management. Our goal is to create a memorable and prestigious event that recognizes and motivates your outstanding achievers."
+    }
+  ]
+  
