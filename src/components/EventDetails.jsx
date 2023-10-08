@@ -10,7 +10,7 @@ const EventDetails = () => {
     const event = events.find(event => event.id === idINT)
 
     console.log(event);
-    const { name, image, shortDescription, description, price, reviews } = event;
+    const { name, image, description, price, reviews } = event;
 
     const notify = () => {
         toast.success("Thanks for liking our event!");
@@ -24,7 +24,7 @@ const EventDetails = () => {
                 <div className="container px-5 py-24 mx-auto">
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <img
-                            alt="ecommerce"
+                            alt=""
                             className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                             src={image}
                         />

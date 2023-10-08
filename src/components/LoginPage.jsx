@@ -11,9 +11,10 @@ function LoginPage() {
 
     const handleLogin = e => {
         e.preventDefault();
+        console.log("clicked");
         const email = e.target.email.value;
         const password = e.target.password.value;
-        // console.log(email, password);
+        console.log(email, password);
 
         signInUser(email, password)
             .then(res => {
@@ -42,7 +43,7 @@ function LoginPage() {
             <div className="w-full max-w-md p-4 rounded-md shadow-lg sm:p-8 mx-auto my-40 border-2 border-gray-100">
                 <h2 className="mb-3 text-3xl font-semibold text-center text-gray-50">Login to your account</h2>
                 <p className="text-sm text-center text-gray-50">Dont have account?
-                    <a href="#" rel="noopener noreferrer" className="focus:underline hover:underline text-accent ml-2 font-semibold">Sign up here</a>
+                    <Link to="/signup" rel="noopener noreferrer" className="focus:underline hover:underline text-accent ml-2 font-semibold">Sign up here</Link>
                 </p>
                 <div className="my-6 space-y-4">
                     <button onClick={() => handleGoogleSignUp()} aria-label="Login with Google" type="button" className="flex items-center justify-center w-full p-4 space-x-4 border-2 border-accent-focus rounded-md">

@@ -1,5 +1,6 @@
-import { useState } from 'react';
-// import event from '../assets/event.png'
+import { useContext, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,16 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const { user, signOutUser } = useContext(AuthContext);
+    // console.log(signOutUser);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                console.log("Sign Out successful");
+            }).catch(error => console.log(error.message))
+    }
 
     return (
         <nav x-data="{ isOpen: false }" className="relative bg-white shadow">
@@ -37,10 +48,10 @@ const Navbar = () => {
                     {/* Mobile Menu open: "block", Menu closed: "hidden" */}
                     <div className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full'}`}>
                         <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                            <a href="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Join Slack</a>
-                            <a href="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Browse Topics</a>
-                            <a href="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Random Item</a>
-                            <a href="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Experts</a>
+                            <NavLink to="/" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Home</NavLink>
+                            <NavLink to="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Gallery</NavLink>
+                            <NavLink to="/login" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">LogIn</NavLink>
+                            <NavLink to="/signup" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">SignUp</NavLink>
                         </div>
 
                         <div className="flex items-center mt-4 lg:mt-0">
@@ -49,10 +60,10 @@ const Navbar = () => {
                                     <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" className="object-cover w-full h-full" alt="avatar" />
                                 </div>
 
-                                <h3 className="mx-2 text-gray-700">Khatab wedaa</h3>
+                                <h3 className="mx-2 text-gray-700">Name</h3>
                             </button>
 
-                            <button className=" btn btn-accent btn-outline h-10 hidden mx-4 text-gray-600 lg:block  hover:bg-[#0ABF68] focus:outline-none" aria-label="show notifications">
+                            <button onClick={() => handleSignOut()} className="btn btn-accent btn-outline h-10 hidden mx-4 text-gray-600 lg:block  hover:bg-[#0ABF68] focus:outline-none" aria-label="show notifications">
                                 Logout
                             </button>
                         </div>
