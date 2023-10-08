@@ -20,12 +20,13 @@ const SignUp = () => {
                 type="text"
                 id="create-account-pseudo"
                 className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                name="pseudo"
-                placeholder="Pseudo"
+                name="name"
+                placeholder="Name"
+                required
               />
             </div>
           </div>
-          <div className="flex gap-4 mb-2">
+          {/* <div className="flex gap-4 mb-2">
             <div className=" relative ">
               <input
                 type="text"
@@ -44,7 +45,7 @@ const SignUp = () => {
                 placeholder="Last name"
               />
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col mb-2">
             <div className=" relative ">
               <input
@@ -52,6 +53,16 @@ const SignUp = () => {
                 id="create-account-email"
                 className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 placeholder="Email"
+                required
+              />
+            </div>
+            <div className=" relative mb-5">
+              <input
+                type="Password"
+                id="create-account-email"
+                className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                placeholder="Password"
+                required
               />
             </div>
           </div>
@@ -64,19 +75,7 @@ const SignUp = () => {
             </button>
           </div>
         </form>
-        <div className="flex items-center justify-center mt-6">
-          <div>
-            <label className="flex items-center mb-3 space-x-3">
-              <input
-                type="checkbox"
-                name="checked-demo"
-                className="form-tick appearance-none bg-white bg-check h-6 w-6 border border-gray-300 rounded-md checked:bg-blue-500 checked:border-transparent focus:outline-none"
-              />
-              <span className="font-normal text-gray-700 dark:text-white">Blue</span>
-            </label>
-            {/* Repeat the above 'label' for other checkbox options */}
-          </div>
-        </div>
+        
       </div>
     </div>
   );
