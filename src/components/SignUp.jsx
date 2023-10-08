@@ -1,28 +1,50 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { useState } from "react";
 import { AuthContext } from '../Providers/AuthProvider'
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
+  const [registerError, setRegisterError] = useState('');
+  const [showPassword, setShowPassword] = useState(false)
+  const passwordRegex = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 
-  const {createUser} = useContext(AuthContext)
+  const { createUser } = useContext(AuthContext)
 
-    const handleRegister = e => {
-        e.preventDefault()
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
-        console.log(name, email, password);  
+  const handleRegister = e => {
+    e.preventDefault()
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, email, password);
+    const isValidPassword = passwordRegex.test(password);
 
-        createUser(email, password)
-        .then(res => {
-            console.log(res.user);
-            user = res.user;
-            user.displayName = name;
-        })
-        .catch(error => {
-            console.log(error.message);
-        })
+    if (password.length < 6) {
+      setRegisterError("Password should not be less than 6 character")
+      return;
     }
+    else if (!isValidPassword) {
+      // console.log(isValidPassword);
+      setRegisterError("Password should contain at least one uppercase letter, one lowercase letter, one digit, one special character")
+      return;
+    }
+
+    setRegisterError('');
+    setShowPassword(false)
+
+    createUser(email, password)
+      .then(res => {
+        console.log(res.user);
+        user = res.user;
+        user.displayName = name;
+      })
+      .catch(error => {
+        console.log(error.message)
+        setRegisterError(error.message)
+      })
+  }
 
 
   return (
@@ -83,13 +105,20 @@ const SignUp = () => {
             </div>
             <div className=" relative mb-5">
               <input
-                type="Password"
+                type={showPassword ? "type" : "password"}
                 id="create-account-email"
                 className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 name='password'
                 placeholder="Password"
                 required
               />
+              <span onClick={() => setShowPassword(!showPassword)} >
+                {
+                  showPassword ? <AiFillEyeInvisible className="text-xl text-black relative left-72 bottom-8"></AiFillEyeInvisible> :
+                    <AiFillEye className="text-xl text-black relative left-72 bottom-8"></AiFillEye>
+                }
+              </span>
+              <p className='text-white text-sm '>{registerError}</p>
             </div>
           </div>
           <div className="flex w-full my-4">
@@ -101,7 +130,7 @@ const SignUp = () => {
             </button>
           </div>
         </form>
-        
+
       </div>
     </div>
   );
