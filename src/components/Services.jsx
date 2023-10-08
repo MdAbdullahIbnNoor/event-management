@@ -1,5 +1,6 @@
-import { key } from 'localforage'
+
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
 
@@ -87,13 +88,13 @@ const Services = () => {
                                 <p className="mb-2 text-gray-700">
                                     {category.shortDescription}
                                 </p>
-                                <a
-                                    href="/"
+                                <Link
+                                    to={`event/${category.id}`}
                                     aria-label=""
                                     className="inline-flex items-center font-semibold text-accent hover:text-purple-800"
                                 >
                                     Learn more
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     )
