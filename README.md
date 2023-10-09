@@ -1,4 +1,4 @@
-# Eventify - Your Event Management Partner
+# Event Studio - Your Event Management Partner
 
 Welcome to Event Studio, your premier destination for seamless event management and workshop services. Our platform offers a range of meticulously planned events tailored to your specific needs. Whether you're looking to host Conferences and Seminars, Trade Shows and Expos, Team Building Workshops, Product Launches, Corporate Meetings, Award Ceremonies, or any other type of event, Event Studio has you covered.
 
