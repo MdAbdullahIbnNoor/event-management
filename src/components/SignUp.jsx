@@ -31,7 +31,7 @@ const SignUp = () => {
     if (!isValidPassword) {
       // console.log(isValidPassword);
       setRegisterError("Please include a valid password");
-      toast.error(registerError);
+      toast.error("Please include a valid password");
       return;
     }
 
