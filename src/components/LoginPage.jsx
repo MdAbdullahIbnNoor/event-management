@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../Providers/AuthProvider";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function LoginPage() {
 
@@ -20,9 +21,12 @@ function LoginPage() {
             .then(res => {
                 console.log(res.user)
                 e.target.reset()
-                naviGate('/')
+                toast.success("Login Successful");
+                naviGate("/")
+
             }).catch(error => {
                 console.log(error.message);
+                toast.error("Invalid Email or Password")
             })
 
     }
@@ -31,6 +35,8 @@ function LoginPage() {
         signUpWithGoogle()
             .then(res => {
                 console.log(res.user)
+                toast.success("Login Successful");
+                naviGate("/")
             })
             .catch(error => {
                 console.log(error.message);
@@ -96,11 +102,12 @@ function LoginPage() {
                 <div className="flex items-center justify-between mt-4">
                     <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
 
-                    <Link to="/register" className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</Link>
+                    <Link to="/signup" className="text-xs text-gray-500 uppercase dark:text-gray-400 hover:underline">or sign up</Link>
 
                     <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }

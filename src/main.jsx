@@ -13,6 +13,8 @@ import LoginPage from './components/LoginPage';
 import SignUp from './components/SignUp';
 import PrivateRoute from './Routes/PrivateRoutes';
 import AuthProvider from './Providers/AuthProvider';
+import Gallery from './components/Gallery';
+import TeamSection from './components/TeamSection';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/gallery",
+        element: <PrivateRoute><Gallery></Gallery></PrivateRoute>
+      },
+      {
+        path: "/team",
+        element: <PrivateRoute><TeamSection></TeamSection></PrivateRoute>
       }
     ]
   }

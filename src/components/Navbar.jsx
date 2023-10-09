@@ -1,9 +1,12 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import defaultUser from "../assets/avater.png"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -17,6 +20,10 @@ const Navbar = () => {
             .then(() => {
                 console.log("Sign Out successful");
             }).catch(error => console.log(error.message))
+    }
+
+    const isTabActive = (path) => {
+        return location.pathname === path;
     }
 
     return (
@@ -48,17 +55,56 @@ const Navbar = () => {
                     {/* Mobile Menu open: "block", Menu closed: "hidden" */}
                     <div className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full'}`}>
                         <div className="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
-                            <NavLink to="/" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Home</NavLink>
-                            <NavLink to="#" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">Gallery</NavLink>
-                            <NavLink to="/login" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">LogIn</NavLink>
-                            <NavLink to="/signup" className="px-3 py-2 mx-3 mt-2 text-gray-700 rounded-md lg:mt-0 hover:bg-gray-100 ">SignUp</NavLink>
+                            <NavLink
+                                exact
+                                to="/"
+                                className={`px-3 py-2 mx-3 mt-2 rounded-md lg:mt-0 font-semibold ${isTabActive("/") ? "text-white bg-[#0ABF68]" : "text-gray-600"}`}
+                            >
+                                Home
+                            </NavLink>
+
+                            {
+                                user && <NavLink
+                                    exact
+                                    to="/gallery"
+                                    className={`px-3 py-2 mx-3 mt-2 rounded-md lg:mt-0 font-semibold ${isTabActive("/gallery") ? "text-white bg-[#0ABF68]" : "text-gray-600"}`}
+                                >
+                                    Gallery
+                                </NavLink>
+                            }
+
+                            {
+                                user && <NavLink
+                                    exact
+                                    to="/team"
+                                    className={`px-3 py-2 mx-3 mt-2 rounded-md lg:mt-0 font-semibold ${isTabActive("/team") ? "text-white bg-[#0ABF68]" : "text-gray-600"}`}
+                                >
+                                    Team
+                                </NavLink>
+                            }
+
+                            <NavLink
+                                exact
+                                to="/login"
+                                className={`px-3 py-2 mx-3 mt-2 rounded-md lg:mt-0 font-semibold ${isTabActive("/login") ? "text-white bg-[#0ABF68]" : "text-gray-600"}`}
+                            >
+                                LogIn
+                            </NavLink>
+
+                            <NavLink
+                                exact
+                                to="/signup"
+                                className={`px-3 py-2 mx-3 mt-2 rounded-md lg:mt-0 font-semibold ${isTabActive("/signup") ? "text-white bg-[#0ABF68]" : "text-gray-600"}`}
+                            >
+                                SignUp
+                            </NavLink>
                         </div>
 
                         <div className="flex items-center mt-4 lg:mt-0">
                             <button type="button" className="flex items-center focus:outline-none" aria-label="toggle profile dropdown">
                                 {
                                     user && <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                                        <img src={user?.photoURL} className="object-cover w-full h-full" alt="avatar" />
+                                        <img src={user?.photoURL ? user.photoURL : defaultUser} className="object-cover w-full h-full" alt="avatar" />
                                     </div>
                                 }
 
