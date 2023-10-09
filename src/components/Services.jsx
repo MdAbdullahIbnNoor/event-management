@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import 'aos/dist/aos.css';
 
 const Services = () => {
 
@@ -60,7 +61,7 @@ const Services = () => {
                 </div> */}
                 {
                     categories.map((category, idx) =>
-                        <div key={idx} className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+                        <div key={idx} className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm" data-aos = "flip-down">
                             <img
                                 src={category.image}
                                 className="object-cover w-full h-64"

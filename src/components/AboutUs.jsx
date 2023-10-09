@@ -1,15 +1,17 @@
 import React from 'react'
 import business from '../assets/business-event.png'
+import 'aos/dist/aos.css';
 
 const AboutUs = () => {
     return (
         <section className="">
-            <h2 className='text-5xl text-center font-bold text-gray-700 mt-16'>About US</h2>
-            <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-between">
-                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                    <h1 className="text-[#0ABF68] font-bold text-6xl lg:text-5xl">A Dedicated Team of Professionals Serving the Corporate World.
+            <h2 className='text-3xl lg:text-5xl text-center font-bold text-gray-700 mt-16 mb-8'>About US</h2>
+            <p className="lg:text-xl text-center font-semibold text-gray-700 mb-8 lg:mb-20 w-4/5 lg:w-1/4 mx-auto">Discover Our Story and Team - Crafting Memorable Experiences with Creativity and Precision</p>
+            <div className="container flex flex-col-reverse justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-around lg:items-center">
+                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-2xl lg:text-left" data-aos="fade-right">
+                    <h1 className="text-[#0ABF68] font-bold text-3xl lg:text-6xl">A Dedicated Team of Professionals Serving the Corporate World.
                     </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12">Our seasoned team of event management experts specializes in orchestrating flawless corporate world events.
+                    <p className="mt-2 lg:mt-6 mb-8 sm:mb-12">Our seasoned team of event management experts specializes in orchestrating flawless corporate world events.
                         <br className="hidden md:inline lg:hidden" />With meticulous planning and unwavering dedication, we deliver exceptional experiences that exceed every expectation.
                     </p>
                     <div class="flex flex-col space-y-2 lg:space-y-0 lg:flex-row">
@@ -17,14 +19,14 @@ const AboutUs = () => {
                         <a href="#" class="block px-5 py-2 text-sm font-medium tracking-wider text-center text-[#0ABF68] transition-colors duration-300 transform border-2 border-[#0ABF68] rounded-md lg:mx-4 hover:bg-[#0ABF68] hover:text-white">Learn More</a>
                     </div>
                 </div>
-                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-80 lg:h-96">
-                    <img src={business} alt="" className="object-contain h-80 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-80 lg:h-96" data-aos="fade-left">
+                    <img src={business} alt="" className="object-contain h-80 sm:h-80 lg:h-[450px]" />
                 </div>
             </div>
 
-            <section className="p-6 my-6">
-                <div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg">
+            <section className="p-6 lg:mx-72 lg:my-6">
+                <div className="container grid grid-cols-2 gap-2 mx-auto lg:grid-cols-4">
+                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg" data-aos="flip-left">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-[#0ABF68]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-800">
                                 <polygon points="160 96.039 160 128.039 464 128.039 464 191.384 428.5 304.039 149.932 304.039 109.932 16 16 16 16 48 82.068 48 122.068 336.039 451.968 336.039 496 196.306 496 96.039 160 96.039"></polygon>
@@ -37,7 +39,7 @@ const AboutUs = () => {
                             <p className="capitalize">Orders</p>
                         </div>
                     </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg">
+                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg" data-aos="flip-right">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-[#0ABF68]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-800">
                                 <path d="M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM403.078,403.078a207.253,207.253,0,1,1,44.589-66.125A207.332,207.332,0,0,1,403.078,403.078Z"></path>
@@ -51,7 +53,7 @@ const AboutUs = () => {
                             <p className="capitalize">New customers</p>
                         </div>
                     </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg">
+                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg" data-aos="flip-right">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-[#0ABF68]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-800">
                                 <path d="M425.706,142.294A240,240,0,0,0,16,312v88H160V368H48V312c0-114.691,93.309-208,208-208s208,93.309,208,208v56H352v32H496V312A238.432,238.432,0,0,0,425.706,142.294Z"></path>
@@ -67,7 +69,7 @@ const AboutUs = () => {
                             <p className="capitalize">Growth</p>
                         </div>
                     </div>
-                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg">
+                    <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg" data-aos="flip-left">
                         <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 dark:bg-[#0ABF68]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="h-9 w-9 dark:text-gray-800">
                                 <path d="M454.423,278.957,328,243.839v-8.185a116,116,0,1,0-104,0V312H199.582l-18.494-22.6a90.414,90.414,0,0,0-126.43-13.367,20.862,20.862,0,0,0-8.026,33.47L215.084,496H472V302.08A24.067,24.067,0,0,0,454.423,278.957ZM192,132a84,84,0,1,1,136,65.9V132a52,52,0,0,0-104,0v65.9A83.866,83.866,0,0,1,192,132ZM440,464H229.3L79.141,297.75a58.438,58.438,0,0,1,77.181,11.91l28.1,34.34H256V132a20,20,0,0,1,40,0V268.161l144,40Z"></path>
