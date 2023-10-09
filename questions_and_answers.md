@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>"A". Reason: 'let greeting': This line declares a variable named greeting using the let keyword. At this point, greeting is declared but uninitialized, so its value is undefined.</i>
 
 </p>
 </details>
@@ -45,7 +45,9 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Option - C: "12".
+Reason:JavaScript performs type coercion, converting "2" to a string.
+</i>
 
 </p>
 </details>
@@ -71,7 +73,9 @@ console.log(food);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Option - A. 
+Reason: Changing info.favoriteFood doesn't affect the original food array; they're separate references.
+</i>
 
 </p>
 </details>
@@ -96,7 +100,7 @@ console.log(sayHi());
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Option-B. Reason: The function expects an argument, but it's missing, resulting in an undefined name.</i>
 
 </p>
 </details>
@@ -124,7 +128,9 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Option - C. 
+Reason: It counts the truthy values (non-zero) in the nums array during iteration.
+</i>
 
 </p>
 </details>
