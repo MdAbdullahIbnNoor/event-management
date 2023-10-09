@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import {  NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import defaultUser from "../assets/avater.png"
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +32,8 @@ const Navbar = () => {
             <div className="container px-6 py-4 mx-auto">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex items-center justify-between">
-                        <a href="#">
-                            <img className="w-auto h-7 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="" />
+                        <a href="/">
+                            <img className="w-auto h-16" src={logo} alt="" />
                         </a>
                         {/*  */}
 

@@ -16,7 +16,7 @@ const Services = () => {
 
 
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-auto max-w-md md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8 lg:py-20 overflow-hidden">
             <h2 className='text-5xl text-center font-bold text-gray-700 mt-16'>Events Category</h2>
             <p className='text-xl text-center font-medium text-gray-600 my-5 mb-16'>Elevating Your Corporate Parties with Expert Planning, Entertainment, and Flawless Execution</p>
             <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">

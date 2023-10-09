@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 
 const AboutUs = () => {
     return (
-        <section className="">
+        <section className="overflow-hidden">
             <h2 className='text-3xl lg:text-5xl text-center font-bold text-gray-700 mt-16 mb-8'>About US</h2>
             <p className="lg:text-xl text-center font-semibold text-gray-700 mb-8 lg:mb-20 w-4/5 lg:w-1/4 mx-auto">Discover Our Story and Team - Crafting Memorable Experiences with Creativity and Precision</p>
             <div className="container flex flex-col-reverse justify-center p-6 mx-auto sm:py-12 lg:py-12 lg:flex-row lg:justify-around lg:items-center">
@@ -35,7 +35,7 @@ const AboutUs = () => {
                             </svg>
                         </div>
                         <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leadi">200</p>
+                            <p className="text-xl lg:text-3xl font-semibold leadi">200</p>
                             <p className="capitalize">Orders</p>
                         </div>
                     </div>
@@ -49,8 +49,8 @@ const AboutUs = () => {
                             </svg>
                         </div>
                         <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leadi">7500</p>
-                            <p className="capitalize">New customers</p>
+                            <p className="text-xl lg:text-3xl font-semibold leadi">7500</p>
+                            <p className="capitalize">Customers</p>
                         </div>
                     </div>
                     <div className="flex p-4 space-x-4 rounded-lg md:space-x-6 border-2 shadow-lg" data-aos="flip-right">
@@ -65,7 +65,7 @@ const AboutUs = () => {
                             </svg>
                         </div>
                         <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leadi">172%</p>
+                            <p className="text-xl lg:text-3xl font-semibold leadi">172%</p>
                             <p className="capitalize">Growth</p>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ const AboutUs = () => {
                             </svg>
                         </div>
                         <div className="flex flex-col justify-center align-middle">
-                            <p className="text-3xl font-semibold leadi">17%</p>
+                            <p className="text-xl lg:text-3xl font-semibold leadi">17%</p>
                             <p className="capitalize">Bounce rate</p>
                         </div>
                     </div>

@@ -5,10 +5,10 @@ const Gallery = () => {
         <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
             <section className="dark:bg-gray-800 dark:text-gray-100">
                 <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-20 md:px-10 lg:px-0 lg:max-w-2xl">
-                    <h1 className="text-4xl font-bold sm:text-5xl">Captured Moments: A Gallery of 
-                        <span className="dark:text-violet-400">Our Memorable</span> and Well-Organized Events
+                    <h1 className="text-3xl lg:text-4xl font-bold sm:text-5xl">Captured Moments: A Gallery of 
+                        <span className="dark:text-[#0ABF68]"> Our Memorable</span> and Well-Organized Events
                     </h1>
-                    <p className=" px-8 lg:px-0 mt-8 mb-5 text-lg">Explore our meticulously arranged events through this captivating gallery. From elegant weddings to dynamic corporate gatherings, these photos showcase our dedication to creating unforgettable experiences for our clients</p>
+                    <p className="lg:w-full lg:px-0 mt-8 mb-5 lg:text-lg">Explore our meticulously arranged events through this captivating gallery. From elegant weddings to dynamic corporate gatherings, these photos showcase our dedication to creating unforgettable experiences for our clients</p>
                 </div>
             </section>
             <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
